@@ -1,0 +1,26 @@
+.k1{
+    width: 1000px;
+    height:1000px;
+  }
+  
+  #motherboard, #cpu, #psu, #gpu, #cooling, #ram, #hard-drive, .m1, .c1, .g1, .hd1, .r1, .po1, .co1 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    overflow: none;
+  }
+  
+  #mb-desc {
+    display: none;
+  }
+  
+  .m1:hover + #mb-desc {
+    display: block;
+  }
+  .m1{
+  width: 500px;
+    height: 450px;
+  }
+  .c1 {
+    width: 100px;
+  }
