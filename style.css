@@ -1,24 +1,12 @@
 .k1{
     width: 1000px;
-    height:1000px;
+    height: 1000px;
   }
-
-  #case {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 40%;
-  }
-  
-#case{
-  margin: 0px auto;
-}
 
   #motherboard, #cpu, #psu, #gpu, #cooling, #ram, #hard-drive, .m1, .c1, .g1, .hd1, .r1, .po1, .co1 {
-    width: 100px;
-    height: 100px;
+    min-width: 100px;
+    min-height: 100px;
     position: absolute;
-    overflow: none;
   }
   
   #mb-desc {
