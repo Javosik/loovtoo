@@ -3,9 +3,15 @@
     height: 1000px;
   }
 
-  #motherboard, #cpu, #psu, #gpu, #cooling, #ram, #hard-drive, .m1, .c1, .g1, .hd1, .r1, .po1, .co1 {
+  #motherboard, #cpu, #psu, #gpu, #cooling, #hard-drive, .m1, .c1, .g1, .hd1, .r1, .po1, .co1 {
     min-width: 100px;
     min-height: 100px;
+    position: absolute;
+  }
+
+  #ram {
+    width: 125px;
+    min-height: 547px;
     position: absolute;
   }
   
@@ -33,11 +39,7 @@
     height:70px
     ;
 }
-.r1{
-    transform: rotate(90deg);
-    width:360px;
-    height: 140px;
-}
+
 .po1{
   width: 400px;
   height: 200px;
