@@ -1,6 +1,12 @@
 var canvas = document.getElementById('viewport'),
   context = canvas.getContext('2d');
 var mb_sqr = new Path2D;
+var c_sqr = new Path2D;
+var g_sqr = new Path2D
+var hd_sqr = new Path2D
+var r_sqr = new Path2D
+var psu_sqr = new Path2D
+var co_sqr = new Path2D
 make_base();
 
 function make_base() {
@@ -13,6 +19,11 @@ function make_base() {
     context.fillStyle = "lightblue";
     context.stroke(mb_sqr);
     context.fill(mb_sqr);
+
+    c_sqr.rect(350, 210, 50, 50);
+    context.fillStyle = "pink";
+    context.stroke(cpu_sqr);
+    context.fill(cpu_sqr);
   }
 
   var motherboard = document.getElementById("motherboard");
