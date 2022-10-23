@@ -17,16 +17,22 @@ function make_base() {
     context.drawImage(base_image, 0, 0, 1000, 1000);
     
     //emaplaadi ruut
-    mb_sqr.rect(50, 70, 500, 600)
+    mb_sqr.rect(50, 69, 500, 600)
     context.fillStyle = "lightblue";
     context.stroke(mb_sqr);
     context.fill(mb_sqr);
 
-    c_sqr.rect(350, 210, 50, 50);
+    c_sqr.rect(326, 221, 70,70);
     context.fillStyle = "pink";
     context.stroke(c_sqr);
     context.fill(c_sqr);
+    
+    g_sqr.rect(119,400,500,70)
+    context.fillStyle = "black";
+    context.stroke(g_sqr)
+    context.fill(g_sqr)
   }
+
 
   var motherboard = document.getElementById("motherboard");
   var cpu = document.getElementById("cpu");
