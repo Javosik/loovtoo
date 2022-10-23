@@ -22,11 +22,13 @@ function make_base() {
     context.stroke(mb_sqr);
     context.fill(mb_sqr);
 
+    //cpu ruut
     c_sqr.rect(326, 221, 70,70);
     context.fillStyle = "pink";
     context.stroke(c_sqr);
     context.fill(c_sqr);
     
+    //gpu ruut
     g_sqr.rect(119,400,500,70)
     context.fillStyle = "black";
     context.stroke(g_sqr)
