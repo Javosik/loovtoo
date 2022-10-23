@@ -17,7 +17,7 @@ function make_base() {
     context.drawImage(base_image, 0, 0, 1000, 1000);
     
     //emaplaadi ruut
-    mb_sqr.rect(50, 69, 500, 600)
+    mb_sqr.rect(30, 70, 500, 580)
     context.fillStyle = "lightblue";
     context.stroke(mb_sqr);
     context.fill(mb_sqr);
@@ -59,8 +59,8 @@ function make_base() {
     if (context.isPointInPath(mb_sqr, newX, newY) && e.path[0].className == "m1")  {
       console.log("motherboard is in the right place")
       moving = !moving
-      image.style.left = 50 + "px";
-      image.style.top = 70 + "px";
+      image.style.left = 30 + "px";
+      image.style.top = 75 + "px";
       document.getElementById("mb1").click;
 
     }
