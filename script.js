@@ -1,5 +1,5 @@
 var canvas = document.getElementById('viewport'),
-  context = canvas.getContext('2d');
+context = canvas.getContext('2d');
 var mb_sqr = new Path2D;
 var c_sqr = new Path2D;
 var g_sqr = new Path2D
@@ -15,6 +15,8 @@ function make_base() {
   base_image.src = 'https://i.ibb.co/gm7S0Lc/Png-Item-3125635.png';
   base_image.onload = function () {
     context.drawImage(base_image, 0, 0, 1000, 1000);
+    
+    //emaplaadi ruut
     mb_sqr.rect(50, 70, 500, 600)
     context.fillStyle = "lightblue";
     context.stroke(mb_sqr);
@@ -22,8 +24,8 @@ function make_base() {
 
     c_sqr.rect(350, 210, 50, 50);
     context.fillStyle = "pink";
-    context.stroke(cpu_sqr);
-    context.fill(cpu_sqr);
+    context.stroke(c_sqr);
+    context.fill(c_sqr);
   }
 
   var motherboard = document.getElementById("motherboard");
@@ -51,6 +53,7 @@ function make_base() {
       moving = !moving
       image.style.left = 50 + "px";
       image.style.top = 70 + "px";
+      document.getElementById("mb1").click;
 
     }
   }
