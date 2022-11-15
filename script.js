@@ -17,7 +17,7 @@ function make_base() {
     context.drawImage(base_image, 0, 0, 1000, 1000);
     
     //emaplaadi ruut
-    mb_sqr.rect(50, 69, 500, 600)
+    mb_sqr.rect(30, 70, 500, 580)
     context.fillStyle = "lightblue";
     context.stroke(mb_sqr);
     context.fill(mb_sqr);
@@ -33,7 +33,29 @@ function make_base() {
     context.fillStyle = "black";
     context.stroke(g_sqr)
     context.fill(g_sqr)
+
+    r_sqr.rect(456,108,70,300)
+    context.fillStyle = "pink";
+    context.stroke(r_sqr)
+    context.fill(r_sqr)
+
+    psu_sqr.rect(59,687,350,200)
+    context.fillStyle = "red";
+    context.stroke(psu_sqr)
+    context.fill(psu_sqr)
+
+    hd_sqr.rect(544,595,300,70)
+    context.fillStyle = "black";
+    context.stroke(hd_sqr)
+    context.fill(hd_sqr)
+
+    co_sqr.rect(262,158,200,200)
+    context.fillStyle = "black";
+    context.stroke(co_sqr)
+    context.fill(co_sqr)
   }
+  
+
 
 
   var motherboard = document.getElementById("motherboard");
@@ -59,8 +81,8 @@ function make_base() {
     if (context.isPointInPath(mb_sqr, newX, newY) && e.path[0].className == "m1")  {
       console.log("motherboard is in the right place")
       moving = !moving
-      image.style.left = 50 + "px";
-      image.style.top = 70 + "px";
+      image.style.left = 30 + "px";
+      image.style.top = 75 + "px";
       document.getElementById("mb1").click;
 
     }
