@@ -23,19 +23,19 @@ function make_base() {
     context.fill(mb_sqr);
 
     //cpu ruut
-    c_sqr.rect(244, 225, 70,70);
+    c_sqr.rect(225, 210, 120,120);
     context.fillStyle = "pink";
     context.stroke(c_sqr);
     context.fill(c_sqr);
     
     //gpu ruut
-    g_sqr.rect(119,400,500,70)
+    g_sqr.rect(5,480,500,70)
     context.fillStyle = "black";
     context.stroke(g_sqr)
     context.fill(g_sqr)
 
     r_sqr.rect(456,108,70,300)
-    context.fillStyle = "pink";
+    context.fillStyle = "green";
     context.stroke(r_sqr)
     context.fill(r_sqr)
 
@@ -45,17 +45,15 @@ function make_base() {
     context.fill(psu_sqr)
 
     hd_sqr.rect(544,595,300,70)
-    context.fillStyle = "black";
+    context.fillStyle = "cyan";
     context.stroke(hd_sqr)
     context.fill(hd_sqr)
 
     co_sqr.rect(185,168,200,200)
-    context.fillStyle = "black";
+    context.fillStyle = "yellow";
     context.stroke(co_sqr)
-    context.fill(co_sqr)
+    //context.fill(co_sqr)
   }
-  
-
 
 
   var motherboard = document.getElementById("motherboard");
@@ -76,8 +74,6 @@ function make_base() {
     image.style.left = newX + "px";
     image.style.top = newY + "px";
 
-    //console.log(e.path[0].className);
-
     if (context.isPointInPath(mb_sqr, newX, newY) && e.path[0].className == "m1")  {
       console.log("motherboard is in the right place")
       moving = !moving
@@ -88,17 +84,17 @@ function make_base() {
 
     if (context.isPointInPath(c_sqr, newX, newY) && e.path[0].className == "c1")  {
       console.log("cpu is in the right place")
-      moving = !moving //326, 221
-      image.style.left = 326 + "px";
-      image.style.top = 221 + "px";
+      moving = !moving //225, 210
+      image.style.left = 230 + "px";
+      image.style.top = 220 + "px";
       document.getElementById("mb1").click;
     }
 
     if (context.isPointInPath(g_sqr, newX, newY) && e.path[0].className == "g1")  {
       console.log("gpu is in the right place")
-      moving = !moving //119,400
-      image.style.left = 119 + "px";
-      image.style.top = 400 + "px";
+      moving = !moving //5,480
+      image.style.left = 5 + "px";
+      image.style.top = 480 + "px";
       document.getElementById("mb1").click;
     }
 
@@ -128,9 +124,9 @@ function make_base() {
 
     if (context.isPointInPath(co_sqr, newX, newY) && e.path[0].className == "co1")  {
       console.log("cooling is in the right place")
-      moving = !moving //262,158
-      image.style.left = 262 + "px";
-      image.style.top = 158 + "px";
+      moving = !moving //185,168
+      image.style.left = 194 + "px";
+      image.style.top = 175 + "px";
       document.getElementById("mb1").click;
     }
   }
