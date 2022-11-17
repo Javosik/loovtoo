@@ -84,7 +84,54 @@ function make_base() {
       image.style.left = 30 + "px";
       image.style.top = 75 + "px";
       document.getElementById("mb1").click;
+    }
 
+    if (context.isPointInPath(c_sqr, newX, newY) && e.path[0].className == "c1")  {
+      console.log("cpu is in the right place")
+      moving = !moving //326, 221
+      image.style.left = 326 + "px";
+      image.style.top = 221 + "px";
+      document.getElementById("mb1").click;
+    }
+
+    if (context.isPointInPath(g_sqr, newX, newY) && e.path[0].className == "g1")  {
+      console.log("gpu is in the right place")
+      moving = !moving //119,400
+      image.style.left = 119 + "px";
+      image.style.top = 400 + "px";
+      document.getElementById("mb1").click;
+    }
+
+    if (context.isPointInPath(r_sqr, newX, newY) && e.path[0].className == "r1")  {
+      console.log("ram is in the right place")
+      moving = !moving //456,108
+      image.style.left = 456 + "px";
+      image.style.top = 108 + "px";
+      document.getElementById("mb1").click;
+    }
+
+    if (context.isPointInPath(psu_sqr, newX, newY) && e.path[0].className == "po1")  {
+      console.log("psu is in the right place")
+      moving = !moving //59,687
+      image.style.left = 59 + "px";
+      image.style.top = 687 + "px";
+      document.getElementById("mb1").click;
+    }
+
+    if (context.isPointInPath(hd_sqr, newX, newY) && e.path[0].className == "hd1")  {
+      console.log("hard drive is in the right place")
+      moving = !moving //544,595
+      image.style.left = 544 + "px";
+      image.style.top = 595 + "px";
+      document.getElementById("mb1").click;
+    }
+
+    if (context.isPointInPath(co_sqr, newX, newY) && e.path[0].className == "co1")  {
+      console.log("cooling is in the right place")
+      moving = !moving //262,158
+      image.style.left = 262 + "px";
+      image.style.top = 158 + "px";
+      document.getElementById("mb1").click;
     }
   }
 
