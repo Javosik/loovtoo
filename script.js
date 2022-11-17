@@ -23,7 +23,7 @@ function make_base() {
     context.fill(mb_sqr);
 
     //cpu ruut
-    c_sqr.rect(326, 221, 70,70);
+    c_sqr.rect(244, 225, 70,70);
     context.fillStyle = "pink";
     context.stroke(c_sqr);
     context.fill(c_sqr);
@@ -49,7 +49,7 @@ function make_base() {
     context.stroke(hd_sqr)
     context.fill(hd_sqr)
 
-    co_sqr.rect(262,158,200,200)
+    co_sqr.rect(185,168,200,200)
     context.fillStyle = "black";
     context.stroke(co_sqr)
     context.fill(co_sqr)
