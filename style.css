@@ -8,8 +8,6 @@
     flex-direction: row;
   }
 
-
-
   #motherboard, #cpu, #psu, #gpu, #cooling, #hard-drive, .m1, .c1, .g1, .hd1, .r1, .po1, .co1 {
     min-width: 100px;
     min-height: 100px;
@@ -19,6 +17,7 @@
   #motherboard {
     left: 996px;
     top: 19px;
+    z-index: 2;
   }
 
   #cpu {
@@ -53,14 +52,21 @@
     left: 1514px;
     top: 36px;
   }
+
+  .m1 {
+    z-index: 3;
+  }
   
   #mb-desc {
     display: none;
+    z-index: 4;
   }
   
-  .m1:hover + #mb-desc {
+  .m1:hover #mb-desc {
     display: block;
+    color:brown;
   }
+
   .m1{
   width: 500px;
     height: 580px;
