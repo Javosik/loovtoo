@@ -20,34 +20,34 @@ function make_base() {
     mb_sqr.rect(30, 70, 500, 580)
     context.fillStyle = "lightblue";
     context.stroke(mb_sqr);
-    context.fill(mb_sqr);
+   // context.fill(mb_sqr);
 
     //cpu ruut
     c_sqr.rect(225, 210, 120,120);
     context.fillStyle = "pink";
     context.stroke(c_sqr);
-    context.fill(c_sqr);
+    //context.fill(c_sqr);
     
     //gpu ruut
     g_sqr.rect(5,480,500,70)
     context.fillStyle = "black";
     context.stroke(g_sqr)
-    context.fill(g_sqr)
+   // context.fill(g_sqr)
 
     r_sqr.rect(456,108,70,300)
     context.fillStyle = "green";
     context.stroke(r_sqr)
-    context.fill(r_sqr)
+    //context.fill(r_sqr)
 
     psu_sqr.rect(59,687,350,200)
     context.fillStyle = "red";
     context.stroke(psu_sqr)
-    context.fill(psu_sqr)
+   // context.fill(psu_sqr)
 
     hd_sqr.rect(544,595,300,70)
     context.fillStyle = "cyan";
     context.stroke(hd_sqr)
-    context.fill(hd_sqr)
+    //context.fill(hd_sqr)
 
     co_sqr.rect(185,168,200,200)
     context.fillStyle = "yellow";
@@ -80,55 +80,43 @@ function make_base() {
       image.style.left = 30 + "px";
       image.style.top = 75 + "px";
       document.getElementById("mb1").click;
-    }
-
-    if (context.isPointInPath(c_sqr, newX, newY) && e.path[0].className == "c1")  {
+    } else if (context.isPointInPath(c_sqr, newX, newY) && e.path[0].className == "c1")  {
       console.log("cpu is in the right place")
       moving = !moving //225, 210
       image.style.left = 230 + "px";
       image.style.top = 220 + "px";
       document.getElementById("mb1").click;
-    }
-
-    if (context.isPointInPath(g_sqr, newX, newY) && e.path[0].className == "g1")  {
+    } else if (context.isPointInPath(g_sqr, newX, newY) && e.path[0].className == "g1")  {
       console.log("gpu is in the right place")
       moving = !moving //5,480
       image.style.left = 5 + "px";
       image.style.top = 480 + "px";
       document.getElementById("mb1").click;
-    }
-
-    if (context.isPointInPath(r_sqr, newX, newY) && e.path[0].className == "r1")  {
+    } else if (context.isPointInPath(r_sqr, newX, newY) && e.path[0].className == "r1")  {
       console.log("ram is in the right place")
       moving = !moving //456,108
       image.style.left = 456 + "px";
       image.style.top = 108 + "px";
       document.getElementById("mb1").click;
-    }
-
-    if (context.isPointInPath(psu_sqr, newX, newY) && e.path[0].className == "po1")  {
+    } else if (context.isPointInPath(psu_sqr, newX, newY) && e.path[0].className == "po1")  {
       console.log("psu is in the right place")
       moving = !moving //59,687
       image.style.left = 59 + "px";
       image.style.top = 687 + "px";
       document.getElementById("mb1").click;
-    }
-
-    if (context.isPointInPath(hd_sqr, newX, newY) && e.path[0].className == "hd1")  {
+    } else if (context.isPointInPath(hd_sqr, newX, newY) && e.path[0].className == "hd1")  {
       console.log("hard drive is in the right place")
       moving = !moving //544,595
       image.style.left = 544 + "px";
       image.style.top = 595 + "px";
       document.getElementById("mb1").click;
-    }
-
-    if (context.isPointInPath(co_sqr, newX, newY) && e.path[0].className == "co1")  {
+    } else if (context.isPointInPath(co_sqr, newX, newY) && e.path[0].className == "co1")  {
       console.log("cooling is in the right place")
       moving = !moving //185,168
       image.style.left = 194 + "px";
       image.style.top = 175 + "px";
       document.getElementById("mb1").click;
-    }
+    } 
   }
 
   function initialClick(e) {

@@ -3,16 +3,55 @@
     height: 1000px;
   }
 
+  #background {
+    display: flex;
+    flex-direction: row;
+  }
+
+
+
   #motherboard, #cpu, #psu, #gpu, #cooling, #hard-drive, .m1, .c1, .g1, .hd1, .r1, .po1, .co1 {
     min-width: 100px;
     min-height: 100px;
     position: absolute;
   }
 
+  #motherboard {
+    left: 996px;
+    top: 19px;
+  }
+
+  #cpu {
+    left: 1508px;
+    top: 434px;
+  }
+
+  #psu {
+    left: 1010px;
+    top: 719px;
+  }
+
+  #gpu {
+    left: 1052px;
+    top: 605px;
+  }
+
+  #cooling {
+    left: 1414px;
+    top: 719px;
+  }
+
+  #hard-drive {
+    left: 1007px;
+    top: 946px;
+  }
+
   #ram {
     width: 125px;
     min-height: 540px;
     position: absolute;
+    left: 1514px;
+    top: 36px;
   }
   
   #mb-desc {
