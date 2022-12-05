@@ -1,12 +1,27 @@
 var canvas = document.getElementById('viewport'),
 context = canvas.getContext('2d');
-var mb_sqr = new Path2D
 var c_sqr = new Path2D
 var g_sqr = new Path2D
 var hd_sqr = new Path2D
 var r_sqr = new Path2D
 var psu_sqr = new Path2D
 var co_sqr = new Path2D
+var moving = false
+
+class Hitbox {
+  constructor(x, y, height, width) {
+    this.x = x
+    this.y = y
+    this.height = height
+    this.width = width
+  }
+
+  setBorder() {
+    var border = new Path2D
+    border.rect(this.x, this.y, this.height, this.width)
+    return border
+  }
+}
 
 class Component {
   constructor(x, y, isInPlace, element) {
@@ -45,42 +60,32 @@ function make_base() {
     context.drawImage(base_image, 0, 0, 1000, 1000);
     
     //emaplaadi ruut
-    mb_sqr.rect(30, 70, 500, 580)
-    context.fillStyle = "lightblue";
-    context.stroke(mb_sqr);
-   // context.fill(mb_sqr);
+    mb_sqr = new Hitbox(30, 70, 500, 580)
+    context.stroke(mb_sqr.setBorder());
 
     //cpu ruut
-    c_sqr.rect(225, 210, 120,120);
-    context.fillStyle = "pink";
-    context.stroke(c_sqr);
-    //context.fill(c_sqr);
+    c_sqr = new Hitbox(225, 210, 120,120)
+    context.stroke(c_sqr.setBorder());
     
     //gpu ruut
-    g_sqr.rect(5,480,500,70)
-    context.fillStyle = "black";
-    context.stroke(g_sqr)
-   // context.fill(g_sqr)
+    g_sqr = new Hitbox(5,480,500,70)
+    context.stroke(g_sqr.setBorder())
 
-    r_sqr.rect(456,108,70,300)
-    context.fillStyle = "green";
-    context.stroke(r_sqr)
-    //context.fill(r_sqr)
+    //ram ruut
+    r_sqr = new Hitbox(456,108,70,300)
+    context.stroke(r_sqr.setBorder())
 
-    psu_sqr.rect(59,687,350,200)
-    context.fillStyle = "red";
-    context.stroke(psu_sqr)
-   // context.fill(psu_sqr)
+    //psu ruut
+    psu_sqr = new Hitbox(59,687,350,200)
+    context.stroke(psu_sqr.setBorder())
 
-    hd_sqr.rect(544,595,300,70)
-    context.fillStyle = "cyan";
-    context.stroke(hd_sqr)
-    //context.fill(hd_sqr)
+    //hard drive ruut
+    hd_sqr = new Hitbox(544,595,300,70)
+    context.stroke(hd_sqr.setBorder())
 
-    co_sqr.rect(185,168,200,200)
-    context.fillStyle = "yellow";
-    context.stroke(co_sqr)
-    //context.fill(co_sqr)
+    //cooler ruut
+    co_sqr = new Hitbox(185,168,200,200)
+    context.stroke(co_sqr.setBorder())
   }
 
   var motherboard = new Component(996, 19, false, document.getElementById("motherboard"))
@@ -100,7 +105,7 @@ function make_base() {
 
   var psu =new Component(1010, 719, false, document.getElementById("psu"))
   psu.setPlace()
-  
+
   var cooling =new Component(1414, 719, false, document.getElementById("cooling"))
   cooling.setPlace()
 
