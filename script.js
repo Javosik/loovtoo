@@ -85,11 +85,16 @@ function make_base() {
   var cpu = new Component(1508, 434, false, document.getElementById("cpu"))
   cpu.setPlace()
 
-  var gpu = document.getElementById("gpu");
-  var hard_drive = document.getElementById("hard-drive");
-  var ram = document.getElementById("ram");
-  var psu = document.getElementById("psu");
-  var cooling = document.getElementById("cooling");
+  var gpu =  new Component(1503, 605, false, document.getElementById("gpu")
+    cpu.setPlace();
+  var hard_drive = new Component(1007, 948, false, document.getElementById("hard-drive")
+  cpu.setPlace();
+  var ram = new Component(1514, , false, document.getElementById("ram"))
+  cpu.setPlace();
+  var psu =new Component(1010, 719, false, document.getElementById("psu"))
+  cpu.setPlace();
+  var cooling =new Component(1414, 719, false, document.getElementById("cooling")
+  cpu.setPlace();
 
   function move(e) {
 
@@ -163,11 +168,11 @@ function make_base() {
 
   window.onload = function () {
     motherboard.element.addEventListener("mousedown", initialClick, false);
-    cpu.addEventListener("mousedown", initialClick, false);
-    gpu.addEventListener("mousedown", initialClick, false);
-    hard_drive.addEventListener("mousedown", initialClick, false);
-    ram.addEventListener("mousedown", initialClick, false);
-    psu.addEventListener("mousedown", initialClick, false);
-    cooling.addEventListener("mousedown", initialClick, false);
+    cpu.element.addEventListener("mousedown", initialClick, false);
+    gpu.element.addEventListener("mousedown", initialClick, false);
+    hard_drive.element.addEventListener("mousedown", initialClick, false);
+    ram.element.addEventListener("mousedown", initialClick, false);
+    psu.element.addEventListener("mousedown", initialClick, false);
+    cooling.element.addEventListener("mousedown", initialClick, false);
   }
 }
