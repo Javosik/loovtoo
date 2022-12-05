@@ -1,12 +1,36 @@
 var canvas = document.getElementById('viewport'),
 context = canvas.getContext('2d');
-var mb_sqr = new Path2D;
-var c_sqr = new Path2D;
+var mb_sqr = new Path2D
+var c_sqr = new Path2D
 var g_sqr = new Path2D
 var hd_sqr = new Path2D
 var r_sqr = new Path2D
 var psu_sqr = new Path2D
 var co_sqr = new Path2D
+
+class Component {
+  constructor(x, y, isInPlace, element) {
+    this.x = x
+    this.y = y
+    this.isInPlace = isInPlace
+    this.element = element
+  }
+
+
+  setPlace() {
+    this.element.style.left = this.x+'px',
+    this.element.style.top = this.y+'px'
+  }
+
+  getStatus() {
+    return this.Status();
+  }
+
+  Status() {
+    return isInPlace
+  }
+}
+
 make_base();
 
 function make_base() {
@@ -55,16 +79,17 @@ function make_base() {
     //context.fill(co_sqr)
   }
 
+  var motherboard = new Component(996, 19, false, document.getElementById("motherboard"))
+  motherboard.setPlace()
 
-  var motherboard = document.getElementById("motherboard");
-  var cpu = document.getElementById("cpu");
+  var cpu = new Component(1508, 434, false, document.getElementById("cpu"))
+  cpu.setPlace()
+
   var gpu = document.getElementById("gpu");
   var hard_drive = document.getElementById("hard-drive");
   var ram = document.getElementById("ram");
   var psu = document.getElementById("psu");
   var cooling = document.getElementById("cooling");
-  var mbdesc = document.getElementById("mb-desc")
-  var moving = false;
 
   function move(e) {
 
@@ -74,12 +99,14 @@ function make_base() {
     image.style.left = newX + "px";
     image.style.top = newY + "px";
 
-    if (context.isPointInPath(mb_sqr, newX, newY) && e.path[0].className == "m1")  {
+    if (context.isPointInPath(mb_sqr, newX, newY) && e.path[0].className == "m1" && mb_sqr_place == false)  {
       console.log("motherboard is in the right place")
-      moving = !moving
       image.style.left = 30 + "px";
       image.style.top = 75 + "px";
-      //document.getElementById("mb1").click;
+      motherboard.isInPlace = true
+      if (motherboard.isInPlace) {
+        moving = !moving
+      }
     } else if (context.isPointInPath(c_sqr, newX, newY) && e.path[0].className == "c1")  {
       console.log("cpu is in the right place")
       moving = !moving //225, 210
@@ -135,7 +162,7 @@ function make_base() {
   }
 
   window.onload = function () {
-    motherboard.addEventListener("mousedown", initialClick, false);
+    motherboard.element.addEventListener("mousedown", initialClick, false);
     cpu.addEventListener("mousedown", initialClick, false);
     gpu.addEventListener("mousedown", initialClick, false);
     hard_drive.addEventListener("mousedown", initialClick, false);

@@ -14,17 +14,6 @@
     position: absolute;
   }
 
-  #motherboard {
-    left: 996px;
-    top: 19px;
-    z-index: 2;
-  }
-
-  #cpu {
-    left: 1508px;
-    top: 434px;
-  }
-
   #psu {
     left: 1010px;
     top: 719px;
