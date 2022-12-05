@@ -16,7 +16,6 @@ class Component {
     this.element = element
   }
 
-
   setPlace() {
     this.element.style.left = this.x+'px',
     this.element.style.top = this.y+'px'
@@ -27,7 +26,12 @@ class Component {
   }
 
   Status() {
-    return isInPlace
+    return this.isInPlace
+  }
+
+  setStatus() {
+    this.isInPlace = !this.isInPlace
+    return this.isInPlace
   }
 }
 
@@ -85,16 +89,20 @@ function make_base() {
   var cpu = new Component(1508, 434, false, document.getElementById("cpu"))
   cpu.setPlace()
 
-  var gpu =  new Component(1503, 605, false, document.getElementById("gpu")
-    cpu.setPlace();
-  var hard_drive = new Component(1007, 948, false, document.getElementById("hard-drive")
-  cpu.setPlace();
-  var ram = new Component(1514, , false, document.getElementById("ram"))
-  cpu.setPlace();
+  var gpu =  new Component(1503, 605, false, document.getElementById("gpu"))
+  gpu.setPlace()
+
+  var hard_drive = new Component(1007, 948, false, document.getElementById("hard-drive"))
+  hard_drive.setPlace()
+
+  var ram = new Component(1514, 36, false, document.getElementById("ram"))
+  ram.setPlace()
+
   var psu =new Component(1010, 719, false, document.getElementById("psu"))
-  cpu.setPlace();
-  var cooling =new Component(1414, 719, false, document.getElementById("cooling")
-  cpu.setPlace();
+  psu.setPlace()
+  
+  var cooling =new Component(1414, 719, false, document.getElementById("cooling"))
+  cooling.setPlace()
 
   function move(e) {
 

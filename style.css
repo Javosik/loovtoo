@@ -14,41 +14,14 @@
     position: absolute;
   }
 
-  #psu {
-    left: 1010px;
-    top: 719px;
-  }
-
-  #gpu {
-    left: 1052px;
-    top: 605px;
-  }
-
-  #cooling {
-    left: 1414px;
-    top: 719px;
-  }
-
-  #hard-drive {
-    left: 1007px;
-    top: 946px;
-  }
-
   #ram {
     width: 125px;
     min-height: 540px;
     position: absolute;
-    left: 1514px;
-    top: 36px;
-  }
-
-  .m1 {
-    z-index: 3;
   }
   
   #mb-desc {
     display: none;
-    z-index: 4;
   }
   
   .m1:hover #mb-desc {
