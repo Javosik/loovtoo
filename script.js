@@ -1,6 +1,5 @@
 var canvas = document.getElementById('viewport'),
 context = canvas.getContext('2d');
-//var moving = false
 var saturated = false
 
 class Hitbox {
@@ -178,18 +177,16 @@ function make_base() {
     var img = element.getElementsByTagName('img')[0]
     image = this;
 
-    console.log(movable.moving, movable.isInPlace)
-
     if (movable.moving == true) {
       if (movable.isInPlace == true) {
         document.removeEventListener("mousemove", move);
-        img.style.filter = "saturate(0)"
+        img.style.filter = "saturate(1)"
         saturated = false
         movable.moving = false
         return
       } else {
         document.removeEventListener("mousemove", move);
-        img.style.filter = "saturate(0)"
+        img.style.filter = "saturate(1)"
         saturated = false
         movable.moving = false
       }
