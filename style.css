@@ -29,6 +29,21 @@
     color:brown;
   }
 
+  #text_show {
+    position: absolute;
+    left: 1650px;
+  }
+
+  #text {
+    resize: none;
+    overflow: auto;
+    outline: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+
   .m1{
   width: 500px;
   height: 580px;

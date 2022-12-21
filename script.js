@@ -103,7 +103,7 @@ function make_base() {
   var cpu = new Component(1508, 434, false, document.getElementById("cpu"), false)
   cpu.setPlace(cpu.x, cpu.y)
 
-  var gpu =  new Component(1503, 605, false, document.getElementById("gpu"), false)
+  var gpu =  new Component(996, 605, false, document.getElementById("gpu"), false)
   gpu.setPlace(gpu.x, gpu.y)
 
   var hard_drive = new Component(1007, 948, false, document.getElementById("hard-drive"), false)
@@ -171,8 +171,9 @@ function make_base() {
   }
 
   function initialClick(e) {
-
+    var text_area = document.querySelector("#text")
     var movable = find_element(e)
+    var desc = get_description(e)
     var element = movable.element
     var img = element.getElementsByTagName('img')[0]
     image = this;
@@ -195,6 +196,7 @@ function make_base() {
     if (movable.moving == false && movable.isInPlace == false) {
       document.addEventListener("mousemove", move, false);
       img.style.filter = "saturate(5)"
+      text_area.value = desc
       saturated = true
       movable.moving = true
     } else {
@@ -229,6 +231,34 @@ function make_base() {
         console.log("I don't work")
      }
   }
+
+  function get_description(e) {
+    switch (e.path[0].className) {
+     case 'm1':
+       return "Emplaadi kirjeldus tuleb siia"
+       break;
+     case 'c1':
+       return ""
+       break;
+     case 'g1':
+       return ""
+       break;
+     case 'r1':
+       return ""
+       break;
+     case 'po1':
+       return ""
+       break;
+     case 'hd1':
+       return ""
+       break;
+     case 'co1':
+       return ""
+       break;
+     default:
+       console.log("I don't work")
+    }
+ }
 
   window.onload = function () {
     motherboard.element.addEventListener("mousedown", initialClick, false);
