@@ -236,25 +236,25 @@ function find_element(e) {
 function get_description(e) {
   switch (e.path[0].className) {
     case 'm1':
-      return "Emplaadi kirjeldus tuleb siia"
+      return "EMAPLAAT (MOTHERBOARD) Emaplaat on elektroonikaseadmetes, eriti arvutites peamine trükkplaat, mis ühendab elektriliselt arvutikomponente ja millel on pistikupesad lisa komponentide ja välisseadmete ühendamiseks.Sõltuvalt arvuti arhitektuurist võivad arvutikomponendid olla ühendatud emaplaadi pesadesse või joodetud emaplaadile (sellele integreeritud). Komponentidevahelisi elektrilisi ühendusi nimetatakse siinideks.Pistmike vahendusel ühendatakse emaplaadile keskprotsessor (CPU), graafika protsessor, muutmälu moodulid, kõvaketas või pooljuhtketas, arvuti alglaadimise programm (BIOS/UEFI), toiteplokk, laienduskaardid ja lisaseadmed."
       break;
     case 'c1':
-      return ""
+      return "Protsessor (CPU)    Keskseade ehk keskprotsessor ehk kesktöötlusseade (inglise keeles central processing unit, CPU), lühidalt protsessor, on arvuti või programmeeritava kontrolleri riistvara, mis täidab programmide masina keeles antud juhiseid ning on peamine vahend ettenähtud aritmeetika-, loogika- ja sisend-/väljund operatsioonide teostamiseks.Protsessor on integraallülituse kujul kasutusel alates 1960. aastatest. Sellest ajast on protsessori ehitus, arhitektuur ja teostus korduvalt muutunud, kuid põhifunktsioonid on jäänud samaks."
       break;
     case 'g1':
-      return ""
+      return "Videokaart (GPU)  Videokaart(ka graafikakaart, graafikakiirendi, kuvaadapter, video adapter, graafika adapter) on arvuti laienduskaart ja seade, mis muundab mälus oleva kujutise kuvarile arusaadavaks signaaliks."
       break;
     case 'r1':
-      return ""
+      return "Muutmälu  Muutmälu ehk operatiivmälu ehk RAM (inglise keele sõnadest Random Access Memory, suvapöördusmälu, otsepöördusmälu) on pooljuhtmälu liik, kuhu saab andmeid kirjutada ja kust neid saab lugeda. Suvapöördus tähendab, et muutmälu iga adresseeritava üksuse poole saab nii lugemiseks kui kirjutamiseks ühtviisi kiirelt otse pöörduda.Muutmälu tähenduses on kasutusel ka terminid põhimälu (nt protsessori põhimälu ja vahemälu), sisemälu  (protsessori sees, erinevalt välismälust), samuti töömälu (näiteks kõrvutuses töömälu maht ja salvestusmälu maht) Muutmälu kuulub haihtuvate ehk hävimälude hulka, millelt toitepinge kadumisel andmed kustuvad."
       break;
     case 'po1':
-      return ""
+      return "Toiteplokk (Power Unit)  Toiteplokk on elektrotehnikas kasutatav seade, mis varustab elektrienergia tarbijat sobivate parameetritega elektriga (pinge, voolutugevus jne). Toiteplokid muundavad energiat tarbijale sobivaks, näiteks keemilist energiat elektrienergiaks või võrgupinget alalisvooluks. Tavaliselt on majapidamises saadaval 230 V / 50 Hz vahelduvpinge või autoakust 12 V alalispinge. Voolu tarbivad seadmed aga vajavad tihti teistsugust pinget, näiteks paljud arvutid vajavad stabiliseeritud pingeid +3,3 V, +5 V ja –5 V, +12 V ja –12 V ühise maanduse suhtes."
       break;
     case 'hd1':
-      return ""
+      return "Kõvaketas (HDD/SSD) (hdd) Kõvaketas (inglise hard disk drive, lühend HDD) on andmetalletusseade, mis kasutab andmete talletamiseks pöörlevaid jäiku mittemagnetilisi, enamasti kas alumiiniumsulamist või klaasist plaate (kettaid), mis on kaetud õhukese magnetilise ferrooksiidlaki kihiga. Andmeid loetakse ja kirjutatakse kettale digitaalselt kodeerituna ning need säilivad ka voolu kadumisel. (sdd) Pooljuhtketas ehk SSD-ketas (ingl solid state drive) on arvutitehnikas välkmälul põhinev andmesalvesti, millel erinevalt HDD-kõvakettast puuduvad liikuvad osad. SSD väliskuju ja elektrilised ühendused võivad sarnaneda HDD-kettale, kuid võivad ka erineda. Näiteks võib SSD olla teostatud PCIe-laiendkaardina. Ka võib SSD olla HDD-ga kombineeritud hübriidketas SSHD (solid state hybrid drive), kus tihedamini kasutatavad failid paigutatakse kiirema kättesaadavuse huvides SSDsse."
       break;
     case 'co1':
-      return ""
+      return "Jahutus (Cooling)  Jahutamine ehk jahutus on keskkonna, eseme, materijali, seadme või selle osa temperatuuri alandamine. See on termilise energia vähendamine selle ülekandmisega teisele kehale või süsteemile."
       break;
     default:
       console.log("I don't work")
